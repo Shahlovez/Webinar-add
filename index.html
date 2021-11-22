@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"> 
+    <title>Tech Interview Webinar</title>
+</head>
+<body>
+    <header>
+         <h1 class="header-title">Nail Your Next Technical Interview</h1>
+         <p class="header-sub">Join our<strong> Free</strong> live Webinar</p>
+         <p class="top-text">Be the Change you Want to See</p>
+    </header>
+ <main id="Main-Content">
+      <h2 class="main-title">Improve your Interviewing Skills</h2>
+      <p class="main-sub">Register Today</p>
+      <p>Top tech companies get thousands of job applications and deliberately make interviewing hard for anyone to get in. One way to speed up the process is to learn from the best. You can do that by signing up for this free webinar! </p>
+  
+      <form id="Email-Collector" class="email-collector" action="#" method="post">
+        <input name="firstName" type="text" id="fname" placeholder="First Name" required >
+        <input name="emailAddress" type="email" id="email" placeholder="E-mail" required>
+        <button class="btn btn-primary" type="submit"> Register</button>
+        </form>
+      <p class="fine-print">We do not share your information without your permission</p>
+ </main>
+<script type="text/javascript">
+
+let emailCollectorForm = document.getElementById("Email-Collector")
+emailCollectorForm.addEventListener("submit", event => {     
+            event.preventDefault()
+
+            
+            let userData = new FormData(event.target)
+            
+            let userFirstName = userData.get("firstName")
+            let userEmailAddress = userData.get("emailAddress")
+            
+            let updatedHtmlContent = `
+                <h2 class="main-title"> Congratulations, ${userFirstName}!</h2>
+
+                <p class="main-sub">You're on your way to landing a new job!</p>
+                
+                <p class="fine-print">You will get weekly tips on how to successfully pass your next technical interview sent to ${userEmailAddress}</p>
+                `
+            let mainContent = document.getElementById("Main-Content")
+            mainContent.innerHTML = updatedHtmlContent
+        })
+
+</script>
+
+</body>
+</html>

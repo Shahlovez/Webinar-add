@@ -1,0 +1,187 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after { /* Used in every single project */
+    box-sizing: inherit;
+  }
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    color: #404040; 
+    text-align: center; 
+    line-height: 1.9;
+    margin: 0; 
+
+}
+/* TYPOGRAPHY */
+.header-title{
+    font-size: 2.25rem; 
+    font-weight: 300; 
+    color: #fff; 
+    margin: 2.5em 0;
+    max-width: 300px;
+}
+.main-title,
+.header-sub{
+    font-size: 1.4rem; 
+    margin: 0; 
+}
+
+h2, strong { font-weight: 900;}
+
+.header-sub,
+.main-sub {
+    color: #F18119;
+    font-weight: 900;
+    text-transform: uppercase;
+    /* margin-top: 0;  */
+}
+
+.top-text {
+    font-weight: 900;
+    color:#F18119;
+    text-transform: uppercase;
+    order: -1; 
+    margin: 0; 
+    padding-top: 2px; 
+    border-top: 5px solid#F18119;
+    
+}
+.top-text,
+.fine-print{
+    font-size: 0.9rem; 
+    letter-spacing: 1px;
+}
+.fine-print{
+    max-width: 200px;
+}
+
+.main-sub{
+    margin-top:0; 
+}
+/* LAYOUT */
+
+header, 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-image: url(images/interview.jpg);
+    background-size: cover;
+    background-color: #404040;
+    background-blend-mode: multiply;
+    background-position: center;
+    padding: 0 .5em 2em;
+    justify-content: space-between;
+    height: 100%;
+}
+
+main{
+    margin: 0 auto; 
+    padding: 2em 1em;
+    max-width: 400px;
+}
+
+/* FORM */
+.email-collector {
+    width: 80%;
+    max-width: 300px;
+    margin:0 auto; 
+}
+
+input,
+.btn {
+    width: 100%; 
+    border-radius: 5px;
+    font-family: inherit; 
+}
+
+input{
+ 
+    font-family: inherit;
+    text-align:inherit;
+    margin-bottom: 1em;
+    padding: .5em; 
+    border: 1px solid #404040;
+    border-radius: 5px;
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+input:focus {
+    transform: scale(1.1);
+}
+    
+
+    .btn{
+        display: inline-block; 
+        padding: 1.25em 1.5em; 
+        font-size: .7rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border:0; 
+        cursor:pointer; 
+    }
+    
+    .btn-primary{
+        background: linear-gradient(to left, #ff713b, #ffa51d);
+        color: #404040;;
+        transform: scale(1);
+        transition: color 250ms, transform 400ms;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus{
+        transform: scale(1.1);
+        color: white; 
+    }
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 650px) {
+    body {
+        font-size: 1.125rem;
+        display: flex;
+    }
+    
+   .header-title {
+        font-size: 3.5rem;
+        max-width: 500px;
+        line-height: 1;
+    }
+    
+   .header-title,
+   .header-sub {
+        margin: 0;
+    }
+    
+    .main-title,
+    .header-sub{
+        font-size: 1.75rem;
+    }
+    header,
+    main {
+        width: 50%;
+        min-height: 100vh;
+    }
+    
+    main {
+        display: flex; 
+        /* flex-direction: column; */
+        justify-content: center;
+    }
+    .btn {
+        font-size: 0.725rem;
+      }
+   
+}
+
+
+
+
